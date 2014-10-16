@@ -1,21 +1,28 @@
 <?php
 $arr = array(
+    // array (
+    //     'id' => 1,
+    //     'loa' => 109,
+    //     'dock' => '.d005-2-3',
+    //     'row' => 1
+    // ),
     array (
         'id' => 1,
-        'loa' => 109,
-        'dock' => '.d005-2-3',
+        'loa' => 122,
+        'dock' => '.d001-1-1',
         'row' => 1
     ),
     array (
         'id' => 2,
-        'loa' => 122,
-        'dock' => '.d005-2-3',
-        'row' => 3
+        'loa' => 100,
+        'dock' => '.d001-1-2',
+        'row' => 1
     ),
     array (
         'id' => 3,
         'loa' => 115,
         'dock' => '.d005-1-1',
+        'type' => 'v-bg',
         'row' => 1
     ),
     array (
@@ -27,51 +34,57 @@ $arr = array(
     array (
         'id' => 5,
         'loa' => 115,
-        'dock' => '.d005-1-4',
-        'row' => 1
-    ),
-    array (
-        'id' => 6,
-        'loa' => 150,
-        'dock' => '.d001-1-1',
-        'row' => 1
-    ),
-    array (
-        'id' => 1,
-        'loa' => 109,
-        'dock' => '.d005-2-3',
-        'row' => 1
-    ),
-    array (
-        'id' => 2,
-        'loa' => 122,
-        'dock' => '.d005-2-3',
+        'dock' => '.d005-1-2',
         'row' => 3
     ),
     array (
-        'id' => 3,
-        'loa' => 115,
-        'dock' => '.d005-1-1',
-        'row' => 1
-    ),
-    array (
-        'id' => 4,
-        'loa' => 300,
-        'dock' => '.d005-1-1',
-        'row' => 2
-    ),
-    array (
-        'id' => 5,
-        'loa' => 115,
-        'dock' => '.d005-1-4',
+        'id' => 6,
+        'loa' => 150,
+        'dock' => '.d005-1-3',
         'row' => 1
     ),
     array (
         'id' => 6,
         'loa' => 150,
-        'dock' => '.d001-1-1',
-        'row' => 1
-    )
+        'dock' => '.d005-1-3',
+        'row' => 2
+    ),
+    // array (
+    //     'id' => 1,
+    //     'loa' => 109,
+    //     'dock' => '.d005-2-3',
+    //     'row' => 1
+    // ),
+    // array (
+    //     'id' => 2,
+    //     'loa' => 122,
+    //     'dock' => '.d005-2-3',
+    //     'row' => 3
+    // ),
+    // array (
+    //     'id' => 3,
+    //     'loa' => 115,
+    //     'dock' => '.d005-1-1',
+    //     'row' => 1
+    // ),
+    // array (
+    //     'id' => 4,
+    //     'loa' => 300,
+    //     'dock' => '.d005-1-1',
+    //     'row' => 2
+    // ),
+    // array (
+    //     'id' => 5,
+    //     'loa' => 115,
+    //     'dock' => '.d005-1-4',
+    //     'row' => 1
+    // ),
+    // array (
+    //     'id' => 6,
+    //     'loa' => 150,
+    //     'dock' => '.d001-1-1',
+    //     'row' => 1
+    // )
 );
 ?>
 
@@ -79,84 +92,93 @@ $arr = array(
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dermaga</title>
+    <title>dock</title>
 </head>
 <body>
 
-    <div class="dermaga-container">
-        <img src="http://rekayasadermaga.files.wordpress.com/2011/02/bird-view1.jpg" class="dermaga-map">
+    <div class="dock-container">
+        <img src="http://rekayasadermaga.files.wordpress.com/2011/02/bird-view1.jpg" class="dock-map">
 
-        <div class="dermaga-layout">
-            <div class="dermaga d005-1-1" data-gap="60" data-stack="up"></div>
-            <div class="dermaga d005-1-2" data-gap="60" data-stack="up"></div>
-            <div class="dermaga d005-1-3" data-gap="60" data-stack="down"></div>
-            <div class="dermaga d005-2-1" data-gap="50" data-stack="up"></div>
-            <div class="dermaga d005-2-2" data-gap="50" data-stack="up"></div>
-            <div class="dermaga d005-2-3" data-gap="50" data-stack="down"></div>
-            <div class="dermaga d003-1-1" data-gap="50" data-stack="up"></div>
-            <div class="dermaga d001-1-1" data-gap="50" data-stack="right"></div>
-
-            <div class="dermaga d005-1-4" data-gap="60" data-stack="down"></div>
-        </div>
-
-
-        <div class="kapal-group">
-            <!-- <div class="kapal k1"></div> -->
-            <!-- <div class="kapal k2"></div> -->
-        </div>
+        <div class="dock d005-1-1" data-stack="up"></div>
+        <div class="dock d005-1-2" data-stack="up"></div>
+        <div class="dock d005-1-3" data-stack="down"></div>
+        <!-- <div class="dock d005-2-1" data-stack="up"></div> -->
+        <!-- <div class="dock d005-2-2" data-stack="up"></div> -->
+        <!-- <div class="dock d005-2-3" data-stack="up"></div> -->
+        <!-- <div class="dock d003-1-1" data-stack="up"></div> -->
+        <div class="dock d001-1-1" data-stack="left"></div>
+        <div class="dock d001-1-2" data-stack="right"></div>
+        <!-- <div class="dock d005-1-4" data-stack="down"></div> -->
     </div>
 
     <style>
 
-        .dermaga-container {
+        .dock-container {
             width: 800px;
             height: 630px;
             position: relative;
             background-color: #005;
+            overflow: hidden;
         }
 
-        .dermaga-map {
-            width: 800px;
-            height: 630px;
+        .dock {
             position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .dermaga {
-            position: absolute;
-            background-color: grey;
+            /*border: 1px solid #fff;*/
         }
 
         .vessel {
             position: absolute;
             height: 40px;
             background-color: rgba(255,255,0,.5);
+            border: 1px solid red;
+        }
+
+        .vessel.v-bg {
+            border-radius: 0!important;
+        }
+
+        .vessel-id {
+            /*border: 1px solid red;*/
+            width: 100%;
+            display: block;
+            line-height: 40px;
+            text-align: center;
+            color: lime;
         }
 
         .d005-1-1 {
             width: 100px;
-            height: 44px;
+            height: 1000px;
             transform: rotate(-7deg);
-            top: 300px;
-            left: 20px;
+            top: -690px;
+            left: -10px;
+        }
+
+        .d005-1-1 .vessel {
+            border-radius: 0 20px 20px 0;
         }
 
         .d005-1-2 {
             width: 100px;
-            height: 44px;
+            height: 1000px;
             transform: rotate(-7deg);
-            top: 288px;
-            left: 120px;
+            top: -702px;
+            left: 91px;
+        }
+
+        .d005-1-2 .vessel {
+            border-radius: 20px 0 0 20px ;
         }
 
         .d005-1-3 {
             width: 100px;
-            height: 44px;
+            height: 1000px;
             transform: rotate(-7deg);
-            top: 276px;
-            left: 220px;
+            top: 341px;
+            left: 118px;
         }
+
+        /*
 
         .d005-1-4 {
             width: 100px;
@@ -194,95 +216,131 @@ $arr = array(
             left: 740px;
         }
 
+        */
+
         .d001-1-1 {
-            width: 18px;
+            width: 1000px;
+            height: 122px;
+            top: 500px;
+            left: -710px;
+        }
+
+        .d001-1-2 {
+            width: 1000px;
             height: 122px;
             top: 500px;
             left: 320px;
         }
-
-        ./*k1 {
-            width: 109px;
-            top: 220px;
-            left: 670px;
-        }
-
-        .k2 {
-            width: 122px;
-            top: 170px;
-            left: 670px;
-        }*/
     </style>
 
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
 
-var LineupDermaga = function(el, options) {
+var Lineupdock = function(el, options) {
     this.$el = $(el);
     this.options = options;
 };
 
-LineupDermaga.prototype = {
+Lineupdock.prototype = {
     add: function(vessel) {
-        var $dock = $(vessel.dock),
-            $vesselEl = $('<div class="vessel"></div>'),
-            gap = $dock.data('gap') || this.options.gap,
-            vesselWidth = this.options.width;
+        var $dock = $(vessel.dock);
+        var $vesselEl = $('<div class="vessel"><span class="vessel-id">' + vessel.id + '</span></div>');
 
-        var transform = ' ';
-        if ($dock.css('transform') != 'none') {
-            transform += $dock.css('transform') + ' ';
-            // $vesselEl.css('transform', $dock.css('transform'));
+        if (vessel.type === 'v-bg') {
+            $vesselEl.addClass('v-bg');
         }
 
         switch($dock.data('stack')) {
             case 'up':
-                $vesselEl.css('left', $dock.position().left);
-                $vesselEl.css('top', $dock.position().top - (gap * (vessel.row - 1)) - $dock.height() - 20);
-                $vesselEl.css('width', vessel.loa);
-                $vesselEl.css('height', vesselWidth);
+                $vesselEl.css({
+                    height: 40,
+                    bottom: (vessel.row - 1) * 50,
+                    width: vessel.loa
+                });
                 break;
             case 'down':
-                var x = $dock.position().top;
-                var y = $dock.position().left;
-                // transform += 'translateX(' + x + 'px) translateY(' + y + 'px) ';
-                $vesselEl.css('left', $dock.position().left);
-                $vesselEl.css('top', $dock.position().top);
-                $vesselEl.css('width', vessel.loa);
-                $vesselEl.css('height', vesselWidth);
+                $vesselEl.css({
+                    height: 40,
+                    top: (vessel.row - 1) * 50,
+                    width: vessel.loa
+                });
                 break;
             case 'left':
-                $vesselEl.css('left', $dock.position().left - (gap * vessel.row));
-                $vesselEl.css('top', $dock.position().top);
-                $vesselEl.css('height', vessel.loa);
-                $vesselEl.css('width', vesselWidth);
+                $vesselEl.css({
+                    height: vessel.loa,
+                    right: (vessel.row - 1) * 50,
+                    width: 40
+                });
                 break;
             case 'right':
-                $vesselEl.css('left', $dock.position().left + (gap * (vessel.row - 1)) + $dock.width() + 10);
-                $vesselEl.css('top', $dock.position().top);
-                $vesselEl.css('height', vessel.loa);
-                $vesselEl.css('width', vesselWidth);
+                $vesselEl.css({
+                    height: vessel.loa,
+                    left: (vessel.row - 1) * 50,
+                    width: 40
+                });
                 break;
         }
+        $dock.append($vesselEl);
 
-        if (transform) {
-            $vesselEl.css('transform', transform);
-        }
+        // var $dock = $(vessel.dock),
+        //     $vesselEl = $('<div class="vessel"></div>'),
+        //     gap = $dock.data('gap') || this.options.gap,
+        //     vesselWidth = this.options.width;
 
-        $vesselEl.html('<div style="text-align: center; line-height: 40px;">' + vessel.id + '</div>');
+        // var transform = ' ';
+        // if ($dock.css('transform') != 'none') {
+        //     transform += $dock.css('transform') + ' ';
+        //     // $vesselEl.css('transform', $dock.css('transform'));
+        // }
 
-        this.$el.append($vesselEl);
+        // switch($dock.data('stack')) {
+        //     case 'up':
+        //         $vesselEl.css('left', $dock.position().left);
+        //         $vesselEl.css('top', $dock.position().top - (gap * (vessel.row - 1)) - $dock.height() - 20);
+        //         $vesselEl.css('width', vessel.loa);
+        //         $vesselEl.css('height', vesselWidth);
+        //         break;
+        //     case 'down':
+        //         var x = $dock.position().top;
+        //         var y = $dock.position().left;
+        //         // transform += 'translateX(' + x + 'px) translateY(' + y + 'px) ';
+        //         $vesselEl.css('left', $dock.position().left);
+        //         $vesselEl.css('top', $dock.position().top);
+        //         $vesselEl.css('width', vessel.loa);
+        //         $vesselEl.css('height', vesselWidth);
+        //         break;
+        //     case 'left':
+        //         $vesselEl.css('left', $dock.position().left - (gap * vessel.row));
+        //         $vesselEl.css('top', $dock.position().top);
+        //         $vesselEl.css('height', vessel.loa);
+        //         $vesselEl.css('width', vesselWidth);
+        //         break;
+        //     case 'right':
+        //         $vesselEl.css('left', $dock.position().left + (gap * (vessel.row - 1)) + $dock.width() + 10);
+        //         $vesselEl.css('top', $dock.position().top);
+        //         $vesselEl.css('height', vessel.loa);
+        //         $vesselEl.css('width', vesselWidth);
+        //         break;
+        // }
+
+        // if (transform) {
+        //     $vesselEl.css('transform', transform);
+        // }
+
+        // $vesselEl.html('<div style="text-align: center; line-height: 40px;">' + vessel.id + '</div>');
+
+        // this.$el.append($vesselEl);
     }
 };
 
-$.fn.lineupDermaga = function(options) {
-    var o = new LineupDermaga(this, options);
-    $(this).data('lineupDermaga', o);
+$.fn.lineupdock = function(options) {
+    var o = new Lineupdock(this, options);
+    $(this).data('lineupdock', o);
     return o;
 };
 
 $(function() {
-    var lineup = $('.kapal-group').lineupDermaga({
+    var lineup = $('.kapal-group').lineupdock({
         gap: 50,
         width: 40,
     });
@@ -297,3 +355,5 @@ $(function() {
 
 </body>
 </html>
+
+<!-- <div style="border:1px solid red; width: 200px; height: 40px;position: absolute;bottom: 0;"></div> -->
